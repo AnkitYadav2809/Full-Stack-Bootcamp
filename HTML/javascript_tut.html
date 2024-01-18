@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            function test(){
+                let x=document.getElementById("check");
+                var add=document.getElementById("permanent");
+                var mail=document.getElementById("mailing");
+                if(x.checked==true){
+                    mail.value=add.value;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <label>Enter Permanent Address:<br><input type="text" id="permanent" name="permanent"  ></label><br>
+        <label><input type="checkbox" id="check" onclick="test()" >Mailing address is same as permanent address</label>
+        <label>Enter Mailing Address:<br><input type="text" id="mailing" name="mailing"  ></label>
+    </body>
+</html>

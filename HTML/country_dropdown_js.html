@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <script>
+            function country(){
+                let cty=document.getElementById("dropcountry").value;
+                let state=document.getElementById("dropstate");
+                
+                for(let i=0;i<state.options.length;i++){
+                    let str=state.options[i].value;
+                    str=str.slice(0,2);
+                    if(str==cty){
+                    state.options[i].style.display="block";}
+                    else{
+                    state.options[i].style.display="none";}
+            }
+            }
+        
+            function state(){
+                let state=document.getElementById("dropstate").value;
+                let cty=document.getElementById("dropcity");
+                st=state.slice(2,state.length);
+                for(let i=0;i<cty.options.length;i++){
+                    let str=cty.options[i].value;
+                    str=str.slice(0,2);
+                    if(str==st){
+                    cty.options[i].style.display="block";}
+                    else{
+                    cty.options[i].style.display="none";}
+                
+ }
+}
+    
+            
+        </script>
+    </head>
+    <body>
+        <select name="dropdown" id="dropcountry" onchange="country()" >
+            <option>--Select the Country!--</option>
+            <option value="IN">India</option>
+            <option value="US">United States</option>
+        </select>
+        <br>
+        <select id="dropstate" onchange="state()">
+            <option>--Select the State--</option>
+            <option value="USSA">San Fransico</option>
+            <option value="INUP">Uttar Pradesh</option>
+            <option value="INUK">Uttarakhand</option>
+            <option value="INPU">Punjab</option>
+        </select>
+        <br>
+        <select id="dropcity" onchange="state()">
+            <option>--Select City--</option>
+            <option value="UPNO">Noida</option>
+            <option value="UPME">Meerut</option>
+            <option value="UKDE">Dehradun</option>
+            <option value="UKHA">Haridwar</option>
+            <option value="PUJA">Jalandhar</option>
+        </select>
+    </body>
+</html>
